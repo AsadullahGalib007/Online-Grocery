@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 26, 2020 at 07:22 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.6
+-- Host: localhost
+-- Generation Time: Sep 15, 2021 at 07:11 PM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 7.3.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `food_order`
+-- Database: `online_grocery`
 --
 
 -- --------------------------------------------------------
@@ -39,10 +39,10 @@ CREATE TABLE `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`id`, `full_name`, `username`, `password`) VALUES
-(1, 'Arsenio Leach', 'toduwaxobi', 'f3ed11bbdb94fd9ebdefbaf646ab94d3'),
-(9, 'Sasha Mendez', 'goxemyde', 'f3ed11bbdb94fd9ebdefbaf646ab94d3'),
-(10, 'Vijay Thapa', 'vijaythapa', 'f3ed11bbdb94fd9ebdefbaf646ab94d3'),
-(12, 'Administrator', 'admin', '21232f297a57a5a743894a0e4a801fc3');
+(101, 'Asadullah Al Galib', 'galib', '03847129f14d98cbcba02ab00b8aadf5'),
+(102, 'Bushra Sheikh', 'bushra', 'fa0f6f6768c23171b84bcef5aeb1e0c3'),
+(108, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
+(110, 'admin2', 'admin2', 'c84258e9c39059a89ab77d846ddab909');
 
 -- --------------------------------------------------------
 
@@ -66,7 +66,7 @@ INSERT INTO `tbl_category` (`id`, `title`, `image_name`, `featured`, `active`) V
 (4, 'Pizza', 'Food_Category_790.jpg', 'Yes', 'Yes'),
 (5, 'Burger', 'Food_Category_344.jpg', 'Yes', 'Yes'),
 (6, 'MoMo', 'Food_Category_77.jpg', 'Yes', 'Yes'),
-(8, 'Quia est ipsum id id', 'Food_Category_929.jpg', 'No', 'Yes');
+(9, 'Cake', 'Food_Category_788.jpg', 'Yes', 'Yes');
 
 -- --------------------------------------------------------
 
@@ -95,7 +95,8 @@ INSERT INTO `tbl_food` (`id`, `title`, `description`, `price`, `image_name`, `ca
 (5, 'Smoky BBQ Pizza', 'Best Firewood Pizza in Town.', '6.00', 'Food-Name-8298.jpg', 4, 'No', 'Yes'),
 (6, 'Sadeko Momo', 'Best Spicy Momo for Winter', '6.00', 'Food-Name-7387.jpg', 6, 'Yes', 'Yes'),
 (7, 'Mixed Pizza', 'Pizza with chicken, Ham, Buff, Mushroom and Vegetables', '10.00', 'Food-Name-7833.jpg', 4, 'Yes', 'Yes'),
-(8, 'Sed ipsum cillum in', 'Sed aut officiis qui', '52.00', '', 5, 'No', 'No');
+(8, 'Sed ipsum cillum in', 'Sed aut officiis qui', '52.00', '', 5, 'No', 'No'),
+(9, 'Cake', 'Burst of sweetness. Must Try the RED VELVET.', '19.00', 'Food-Name-3224.jpg', 9, 'Yes', 'Yes');
 
 -- --------------------------------------------------------
 
@@ -126,6 +127,29 @@ INSERT INTO `tbl_order` (`id`, `food`, `price`, `qty`, `total`, `order_date`, `s
 (2, 'Best Burger', '4.00', 4, '16.00', '2020-11-30 03:52:43', 'Delivered', 'Kelly Dillard', '+1 (908) 914-3106', 'fexekihor@mailinator.com', 'Incidunt ipsum ad d'),
 (3, 'Mixed Pizza', '10.00', 2, '20.00', '2020-11-30 04:07:17', 'Delivered', 'Jana Bush', '+1 (562) 101-2028', 'tydujy@mailinator.com', 'Minima iure ducimus');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_vendor`
+--
+
+CREATE TABLE `tbl_vendor` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `full_name` varchar(100) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_vendor`
+--
+
+INSERT INTO `tbl_vendor` (`id`, `full_name`, `username`, `password`) VALUES
+(1, 'Rahim Mia', 'iamRahim', '9733b92d7d60ecac9ad32ff7a5c87a3c'),
+(2, 'Karim Mia', 'iamKarim', '2167a6ac80340b69f3b05b800417d6c7'),
+(3, 'Asadullah Al Galib', 'galib', '03847129f14d98cbcba02ab00b8aadf5'),
+(10, 'vendor', 'vendor', '21232f297a57a5a743894a0e4a801fc3');
+
 --
 -- Indexes for dumped tables
 --
@@ -155,6 +179,12 @@ ALTER TABLE `tbl_order`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_vendor`
+--
+ALTER TABLE `tbl_vendor`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -162,25 +192,31 @@ ALTER TABLE `tbl_order`
 -- AUTO_INCREMENT for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
 -- AUTO_INCREMENT for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tbl_food`
 --
 ALTER TABLE `tbl_food`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tbl_order`
 --
 ALTER TABLE `tbl_order`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_vendor`
+--
+ALTER TABLE `tbl_vendor`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
