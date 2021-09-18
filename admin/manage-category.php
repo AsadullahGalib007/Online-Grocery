@@ -59,7 +59,7 @@
                 <br /><br /><br />
 
                 <table class="tbl-full">
-                    <tr>
+                    <tr class="text-center">
                         <th>S.N.</th>
                         <th>Title</th>
                         <th>Image</th>
@@ -97,7 +97,7 @@
 
                                 ?>
 
-                                    <tr>
+                                    <tr class="text-center">
                                         <td><?php echo $sn++; ?>. </td>
                                         <td><?php echo $title; ?></td>
 
@@ -110,7 +110,7 @@
                                                     //Display the Image
                                                     ?>
                                                     
-                                                    <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" width="100px" >
+                                                    <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" width="100px" , height="80px">
                                                     
                                                     <?php
                                                 }

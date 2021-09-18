@@ -17,8 +17,8 @@
                 <br><br>
 
                 <table class="tbl-full">
-                    <tr>
-                        <th>S.N.</th>
+                    <tr class="text-center">
+                        <th>S.N</th>
                         <th>Food</th>
                         <th>Price</th>
                         <th>Qty.</th>
@@ -62,8 +62,8 @@
                                 
                                 ?>
 
-                                    <tr>
-                                        <td><?php echo $sn++; ?>. </td>
+                                    <tr class="text-center">
+                                        <td><?php echo $sn++; ?></td>
                                         <td><?php echo $food; ?></td>
                                         <td><?php echo $price; ?></td>
                                         <td><?php echo $qty; ?></td>

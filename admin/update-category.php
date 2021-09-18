@@ -170,23 +170,23 @@
                             die();
                         }
 
-                        //B. Remove the Current Image if available
-                        if($current_image!="")
-                        {
-                            $remove_path = "../images/category/".$current_image;
+                        // //B. Remove the Current Image if available
+                        // if($current_image!="")
+                        // {
+                        //     $remove_path = "../images/category/".$current_image;
 
-                            $remove = unlink($remove_path);
+                        //     $remove = unlink($remove_path);
 
-                            //CHeck whether the image is removed or not
-                            //If failed to remove then display message and stop the processs
-                            if($remove==false)
-                            {
-                                //Failed to remove image
-                                $_SESSION['failed-remove'] = "<div class='error'>Failed to remove current Image.</div>";
-                                header('location:'.SITEURL.'admin/manage-category.php');
-                                die();//Stop the Process
-                            }
-                        }
+                        //     //CHeck whether the image is removed or not
+                        //     //If failed to remove then display message and stop the processs
+                        //     if($remove==false)
+                        //     {
+                        //         //Failed to remove image
+                        //         $_SESSION['failed-remove'] = "<div class='error'>Failed to remove current Image.</div>";
+                        //         header('location:'.SITEURL.'admin/manage-category.php');
+                        //         die();//Stop the Process
+                        //     }
+                        // }
                         
 
                     }
