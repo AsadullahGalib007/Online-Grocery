@@ -1,2 +1,2 @@
 # online_grocery
-Online Grocery Web App
+Online Grocery Web Application
