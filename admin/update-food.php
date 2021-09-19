@@ -188,14 +188,6 @@
                     //CHeck whether th file is available or not
                     if($image_name!="")
                     {
-                        //IMage is Available
-                        //A. Uploading New Image
-
-                        //REname the Image
-                        $ext = end(explode('.', $image_name)); //Gets the extension of the image
-
-                        $image_name = "Food-Name-".rand(0000, 9999).'.'.$ext; //THis will be renamed image
-
                         //Get the Source Path and DEstination PAth
                         $src_path = $_FILES['image']['tmp_name']; //Source Path
                         $dest_path = "../images/food/".$image_name; //DEstination Path
@@ -213,31 +205,20 @@
                             //Stop the Process
                             die();
                         }
-                        //3. Remove the image if new image is uploaded and current image exists
-                        //B. Remove current Image if Available
-                        if($current_image!="")
-                        {
-                            //Current Image is Available
-                            //REmove the image
-                            $remove_path = "../images/food/".$current_image;
-
-                            $remove = unlink($remove_path);
-
-                            //Check whether the image is removed or not
-                            if($remove==false)
-                            {
-                                //failed to remove current image
-                                $_SESSION['remove-failed'] = "<div class='error'>Faile to remove current image.</div>";
-                                //redirect to manage food
-                                header('location:'.SITEURL.'admin/manage-food.php');
-                                //stop the process
-                                die();
-                            }
-                        }
                     }
+                    else if($title == "" AND $current_image =="")
+                    {
+                        //SEt message
+                        $_SESSION['upload'] = "<div class='error'>Failed to Update. Please select an image and a suitable title</div>";
+                        //Redirect to Add CAtegory Page
+                        header('location:'.SITEURL.'admin/manage-food.php');
+                        //STop the Process
+                        die();
+                    }
+
                     else
                     {
-                        $image_name = $current_image; //Default Image when Image is Not Selected
+                        $image_name = $current_image;
                     }
                 }
                 else

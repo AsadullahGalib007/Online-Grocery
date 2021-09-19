@@ -100,7 +100,7 @@
                                             {
                                                 //WE Have Image, Display Image
                                                 ?>
-                                                <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" width="100px">
+                                                <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" width="100px", height="80px">
                                                 <?php
                                             }
                                         ?>
