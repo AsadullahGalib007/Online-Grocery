@@ -10,7 +10,13 @@
 			include('partials/getV_id.php');
 		?>
 		<br><br>
-
+		<?php 
+			if(isset($_SESSION['login']))
+			{
+				echo $_SESSION['login'];
+				unset($_SESSION['login']);
+			}
+		?>
 
 		<div class="col-4 text-center">
 

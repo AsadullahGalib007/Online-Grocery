@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN</title>
+    <title>Admin Log in</title>
     <link rel="stylesheet" href="../css/admin.css">
 </head>
 <body>
@@ -13,10 +13,10 @@
     <h1 class="text-center">LOGIN</h1>
     <br><br>
             <?php 
-                if(isset($_SESSION['login']))
+                if(isset($_SESSION['admin']))
                 {
-                    echo $_SESSION['login'];
-                    unset($_SESSION['login']);
+                    echo $_SESSION['admin'];
+                    unset($_SESSION['admin']);
                 }
 
                 if(isset($_SESSION['no-login-message']))
@@ -65,7 +65,7 @@
         if($count==1)
         {
             //User AVailable and Login Success
-            $_SESSION['login'] = "<div class='success'>Login Successful.</div>";
+            $_SESSION['admin'] = "<div class='success'>Login Successful.</div>";
             $_SESSION['user'] = $username; //TO check whether the user is logged in or not and logout will unset it
 
             //REdirect to HOme Page/Dashboard
@@ -74,7 +74,7 @@
         else
         {
             //User not Available and Login FAil
-            $_SESSION['login'] = "<div class='error text-center'>Username or Password did not match.</div>";
+            $_SESSION['admin'] = "<div class='error text-center'>Username or Password did not match.</div>";
             //REdirect to HOme Page/Dashboard
             header('location:'.SITEURL.'admin/login.php');
         }
