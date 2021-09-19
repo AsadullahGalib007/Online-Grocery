@@ -68,7 +68,7 @@
                             {
                                 //Display the Image
                                 ?>
-                                <img src="<?php echo SITEURL; ?>images/category/<?php echo $current_image; ?>" width="150px">
+                                <img src="<?php echo SITEURL; ?>images/category/<?php echo $current_image; ?>" width="150px", height="80px">
                                 <?php
                             }
                             else
@@ -145,10 +145,10 @@
 
                         //Auto Rename our Image
                         //Get the Extension of our image (jpg, png, gif, etc) e.g. "specialfood1.jpg"
-                        $ext = end(explode('.', $image_name));
+                        // $ext = end(explode('.', $image_name));
 
-                        //Rename the Image
-                        $image_name = "Food_Category_".rand(000, 999).'.'.$ext; // e.g. Food_Category_834.jpg
+                        // //Rename the Image
+                        // $image_name = "Food_Category_".rand(000, 999).'.'.$ext; // e.g. Food_Category_834.jpg
                         
 
                         $source_path = $_FILES['image']['tmp_name'];
@@ -190,6 +190,16 @@
                         
 
                     }
+                    else if($title == "" AND $current_image =="")
+                    {
+                        //SEt message
+                        $_SESSION['upload'] = "<div class='error'>Failed to Update. Please select an image and a suitable title</div>";
+                        //Redirect to Add CAtegory Page
+                        header('location:'.SITEURL.'admin/manage-category.php');
+                        //STop the Process
+                        die();
+                    }
+
                     else
                     {
                         $image_name = $current_image;

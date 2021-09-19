@@ -1,14 +1,4 @@
-<!-- 
-    DECLARE @MemberId int
-
-INSERT INTO Member (name) VALUES ('hello');
-
-SET @MemberId = SCOPE_IDENTITY()
-
-INSERT INTO Member_Detail (pk, name) VALUES (@MemberId, 'hello again')
- -->
-
- <?php include('partials/menu.php'); ?>
+<?php include('partials/menu.php'); ?>
 
 <div class="main-content">
     <div class="wrapper">
