@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 18, 2021 at 06:03 PM
+-- Generation Time: Sep 19, 2021 at 06:12 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -67,8 +67,10 @@ INSERT INTO `tbl_category` (`id`, `title`, `image_name`, `featured`, `active`) V
 (17, 'Fucka', 'Food_Category_458.jpg', 'No', 'No'),
 (18, 'Pizza', 'Food_Category_857.jpg', 'Yes', 'Yes'),
 (21, 'Fucka', 'Food-Category-1005.jpg', 'Yes', 'Yes'),
-(24, 'Jhal Muri', 'Food-Category-1003.jpg', 'No', 'No'),
-(25, 'Dalgona Coffee', 'Food-Category-1004.jpg', 'Yes', 'Yes');
+(25, 'Coffee', 'Food-Category-1004.jpg', 'Yes', 'Yes'),
+(26, 'MoMo', 'Food_Category_77.jpg', 'Yes', 'Yes'),
+(28, 'Pasta', 'Food-Category--8485.jpg', 'No', 'Yes'),
+(29, 'Jhal Muri', 'Food-Category-1003.jpg', 'No', 'No');
 
 -- --------------------------------------------------------
 
@@ -97,9 +99,9 @@ INSERT INTO `tbl_food` (`id`, `title`, `description`, `price`, `image_name`, `ca
 (5, 'Smoky BBQ Pizza', 'Best Firewood Pizza in Town.', '6.00', 'Food-Name-8298.jpg', 4, 'No', 'Yes'),
 (6, 'Sadeko Momo', 'Best Spicy Momo for Winter', '6.00', 'Food-Name-7387.jpg', 6, 'Yes', 'Yes'),
 (7, 'Mixed Pizza', 'Pizza with chicken, Ham, Buff, Mushroom and Vegetables', '10.00', 'Food-Name-7833.jpg', 4, 'Yes', 'Yes'),
-(8, 'Sed ipsum cillum in', 'Sed aut officiis qui', '52.00', '', 5, 'No', 'No'),
 (9, 'Cake', 'Burst of sweetness. Must Try the RED VELVET.', '19.00', 'Food-Name-3224.jpg', 9, 'Yes', 'Yes'),
-(10, 'Pasta', 'Taste this delicious pasta.', '5.00', 'Food-Name-4252.jpg', 4, 'No', 'Yes');
+(13, 'Pasta', 'Best pasta in town', '7.00', 'Food-Name-1003.jpg', 28, 'No', 'Yes'),
+(15, 'Dalgona Coffee', 'Try this icy, fresh, chocolaty dalgona coffee', '5.00', 'Food-Name-1004.jpg', 25, 'Yes', 'Yes');
 
 -- --------------------------------------------------------
 
@@ -201,13 +203,13 @@ ALTER TABLE `tbl_admin`
 -- AUTO_INCREMENT for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `tbl_food`
 --
 ALTER TABLE `tbl_food`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `tbl_order`
