@@ -1,6 +1,5 @@
 
 <?php include('partials/menu.php'); ?>
-
 <!-- Main Content Section Starts -->
 <div class="main-content">
 	<div class="wrapper">
