@@ -1,6 +1,7 @@
 <link rel="stylesheet" type="text/css" href="../css/admin.css">
-<?php include('partials/menu.php'); ?>
-
+<?php
+    include('partials/menu.php'); 
+?>
 <div class="main-content">
     <div class="wrapper">
         <h1>Update Vendor</h1>

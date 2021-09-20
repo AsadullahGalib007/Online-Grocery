@@ -24,7 +24,7 @@
     <!-- CAtegories Section Starts Here -->
     <section class="categories">
         <div class="container">
-            <h2 class="text-center">Explore Foods</h2>
+            <h2 class="text-center">Explore Items</h2>
 
             <?php 
                 //Create SQL Query to Display CAtegories from Database
@@ -58,7 +58,7 @@
                                     {
                                         //Image Available
                                         ?>
-                                        <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" alt="Pizza" class="img-responsive img-curve">
+                                        <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" alt="Pizza" class="img-responsive img-curve" width="100px", height="200px">
                                         <?php
                                     }
                                 ?>
@@ -95,7 +95,7 @@
             
             //Getting Foods from Database that are active and featured
             //SQL Query
-            $sql2 = "SELECT * FROM tbl_food WHERE active='Yes' AND featured='Yes' LIMIT 6";
+            $sql2 = "SELECT * FROM tbl_food WHERE active='Yes' AND featured='Yes'";
 
             //Execute the Query
             $res2 = mysqli_query($conn, $sql2);
