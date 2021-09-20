@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 19, 2021 at 06:12 PM
+-- Generation Time: Sep 20, 2021 at 06:38 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `online_grocery`
 --
+CREATE DATABASE IF NOT EXISTS `online_grocery` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `online_grocery`;
 
 -- --------------------------------------------------------
 
@@ -152,8 +154,7 @@ CREATE TABLE `tbl_vendor` (
 INSERT INTO `tbl_vendor` (`id`, `full_name`, `username`, `password`) VALUES
 (1, 'Rahim Mia', 'iamRahim', '9733b92d7d60ecac9ad32ff7a5c87a3c'),
 (2, 'Karim Mia', 'iamKarim', '2167a6ac80340b69f3b05b800417d6c7'),
-(3, 'Asadullah Al Galib', 'galib', '03847129f14d98cbcba02ab00b8aadf5'),
-(11, 'vendor', 'vendor', '7c3613dba5171cb6027c67835dd3b9d4');
+(3, 'Asadullah Bin Rahman', 'galib', '03847129f14d98cbcba02ab00b8aadf5');
 
 --
 -- Indexes for dumped tables
@@ -203,13 +204,13 @@ ALTER TABLE `tbl_admin`
 -- AUTO_INCREMENT for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `tbl_food`
 --
 ALTER TABLE `tbl_food`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `tbl_order`
@@ -221,7 +222,7 @@ ALTER TABLE `tbl_order`
 -- AUTO_INCREMENT for table `tbl_vendor`
 --
 ALTER TABLE `tbl_vendor`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
