@@ -1,19 +1,16 @@
 
-/* CSS for All */
 *{
     margin: 0 0;
     padding: 0 0;
-    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
 .container{
     width: 80%;
     margin: 0 auto;
     padding: 1%;
 }
 .img-responsive{
-    width: 50px;
-    height: 50px;
+    width: 100%;
 }
 .img-curve{
     border-radius: 15px;
@@ -38,11 +35,11 @@
 }
 
 a{
-    color: #585455;
+    color: #ff6b81;
     text-decoration: none;
 }
 a:hover{
-    color: #e6aaaf;
+    color: #ff4757;
 }
 
 .btn{
@@ -60,20 +57,6 @@ a:hover{
     color: white;
     background-color: #ff4757;
 }
-
-
-.btn-secondary{
-	background-color: #7bed9f;
-	padding: 1%;
-	color: white;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-.btn-secondary:hover{
-	background-color: #2ed573;
-}
-
 h2{
     color: #2f3542;
     font-size: 2rem;
@@ -97,43 +80,21 @@ fieldset{
     border-radius: 5px;
 }
 
+.error{
+    padding: 2%;
+    color: red;
+}
+.success{
+    padding: 2%;
+    color: green;
+}
+
 
 /* CSSS for navbar section */
 
-
-.logo img{
-    position:absolute;
-    width: 150px;
-
-}
-nav{
-    
-    width: 100%;
-    overflow: auto;
-    
-    
-}
-.nav-links{
-margin: 0 0 0 50px;
-padding: 15px;
-
-
-}
-.nav-list{
-    display: block;
-    float: right;   
-     list-style:none;
-}
-nav a{
-
-    display: block;
-    padding: 20px 10px;
-    text-decoration: none;
-    text-align: left;
-    letter-spacing: 2px;
-    font-family: 'Quicksand', sans-serif;
-    
-
+.logo{
+    width: 10%;
+    float: left;
 }
 .menu{
     line-height: 60px;
@@ -152,54 +113,21 @@ nav a{
 /* CSS for Food SEarch Section */
 
 .food-search{
-    background-image: url(../images/bg2.jpeg);
+    background-image: url(../images/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 10% 0;
-    margin-top:30px;
+    padding: 7% 0;
 }
 
 .food-search input[type="search"]{
-    width: 60%;
+    width: 50%;
     padding: 1%;
     font-size: 1rem;
     border: none;
     border-radius: 5px;
 }
-/*CSS FOR CAROUSEL*/
-.carousel-inner > .carousel-item > img {
-    width:1200px;
-    height:360px;
-    background-size: cover;
-  }
-  h1{
-    color:white;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 75pt;
-}
-.story{
-    color:rgb(48, 33, 82);
-    font-family: 'Bebas Neue', cursive;
-    font-size: 75pt;
-    margin-top: 15px;
 
-}
-.story-details{
-    color:#353b48;
-    font-family: 'Bebas Neue', cursive;
-    font-family: 'Tangerine', cursive;
-    line-height: 45px;
-    font-size: 30pt; 
-    font-weight: bold;
-    text-align: center;
-    margin-right: 2px;
-    margin-left: 2px;
-
-}
-p{
-    color:white;
-}
 
 /* CSS for Categories */
 .categories{
@@ -248,6 +176,15 @@ p{
 }
 
 
+/* CSS for Social */
+.social ul{
+    list-style-type: none;
+}
+.social ul li{
+    display: inline;
+    padding: 1%;
+}
+
 /* for Order Section */
 .order{
     width: 50%;
@@ -266,98 +203,6 @@ p{
     font-weight: bold;
 }
 
-   /* footer starts here*/
-   .footer{
-    background-color: #353b48;
-    
-    padding:70px 0;
-}
-ul{
-  list-style:none;
-}
-.fcontainer{
-    max-width: 1170px;
-    
-    margin:auto;
-
-}
-.frow{
-    display: flex;
-    flex-wrap: wrap;
-}
-.footer-col{
-    width:25%;
-    padding:0 15px;
-}
-.footer-col h4{
-    font-size:20px;
-    color:white;
-    margin-bottom: 35px;
-    position:relative;
-    font-weight: 500;
-  
-    
-}
-.footer-col h4::before {
-    content: '';
-    position:absolute;
-    left: 0;
-    bottom: -10px;
-    height:2px;
-    box-sizing: border-box;
-    background-color: red;
-    width:90px;     
-}
-.footer-col ul li:not(:last-child){
-    margin-bottom: 10px;
-
-}
-.footer-col ul li a{
-    font-size: 16px;
-    color: white;
-    text-transform: capitalize;
-    text-decoration: none;
-    font-weight: 300;
-    color:#bbbbbb;
-    display: block;
-    transition: all 0.3s ease;
-
-}
-.footer-col ul li a:hover{
-    color:white;
-    padding-left: 10px;
-
-}
-.footer-col .social-links a{
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    background-color: rgba(255,255,255,0.2);
-    margin:0 10px 10px 0;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    color: white;
-    transition: all 0.5s ease;
-}
-.footer-col .social-links a:hover{
-    color:#24262b;
-    background-color: white;
-}
-/*footer responsive*/
-@media(max-width:767px){
-    .footer-col{
-        width: 50%;
-        margin-bottom: 30px;
-    }
-}
-@media(max-width:574px){
-  .footer-col{
-      width: 100%;
-      
-  }
-}
-/*footer section ends here*/
 
 
 /* CSS for Mobile Size or Smaller Screen */
