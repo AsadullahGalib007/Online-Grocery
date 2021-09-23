@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 20, 2021 at 06:38 PM
+-- Generation Time: Sep 23, 2021 at 12:43 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -28,6 +28,8 @@ USE `online_grocery`;
 --
 -- Table structure for table `tbl_admin`
 --
+-- Creation: Sep 15, 2021 at 07:20 AM
+--
 
 CREATE TABLE `tbl_admin` (
   `id` int(10) UNSIGNED NOT NULL,
@@ -35,6 +37,10 @@ CREATE TABLE `tbl_admin` (
   `username` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONSHIPS FOR TABLE `tbl_admin`:
+--
 
 --
 -- Dumping data for table `tbl_admin`
@@ -51,6 +57,8 @@ INSERT INTO `tbl_admin` (`id`, `full_name`, `username`, `password`) VALUES
 --
 -- Table structure for table `tbl_category`
 --
+-- Creation: Sep 15, 2021 at 07:20 AM
+--
 
 CREATE TABLE `tbl_category` (
   `id` int(10) UNSIGNED NOT NULL,
@@ -59,6 +67,10 @@ CREATE TABLE `tbl_category` (
   `featured` varchar(10) NOT NULL,
   `active` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONSHIPS FOR TABLE `tbl_category`:
+--
 
 --
 -- Dumping data for table `tbl_category`
@@ -79,6 +91,8 @@ INSERT INTO `tbl_category` (`id`, `title`, `image_name`, `featured`, `active`) V
 --
 -- Table structure for table `tbl_food`
 --
+-- Creation: Sep 16, 2021 at 07:52 AM
+--
 
 CREATE TABLE `tbl_food` (
   `id` int(10) UNSIGNED NOT NULL,
@@ -90,6 +104,10 @@ CREATE TABLE `tbl_food` (
   `featured` varchar(10) NOT NULL,
   `active` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONSHIPS FOR TABLE `tbl_food`:
+--
 
 --
 -- Dumping data for table `tbl_food`
@@ -110,6 +128,8 @@ INSERT INTO `tbl_food` (`id`, `title`, `description`, `price`, `image_name`, `ca
 --
 -- Table structure for table `tbl_order`
 --
+-- Creation: Sep 15, 2021 at 07:20 AM
+--
 
 CREATE TABLE `tbl_order` (
   `id` int(10) UNSIGNED NOT NULL,
@@ -126,6 +146,10 @@ CREATE TABLE `tbl_order` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONSHIPS FOR TABLE `tbl_order`:
+--
+
+--
 -- Dumping data for table `tbl_order`
 --
 
@@ -139,6 +163,8 @@ INSERT INTO `tbl_order` (`id`, `food`, `price`, `qty`, `total`, `order_date`, `s
 --
 -- Table structure for table `tbl_vendor`
 --
+-- Creation: Sep 15, 2021 at 07:27 AM
+--
 
 CREATE TABLE `tbl_vendor` (
   `id` int(10) UNSIGNED NOT NULL,
@@ -148,6 +174,10 @@ CREATE TABLE `tbl_vendor` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONSHIPS FOR TABLE `tbl_vendor`:
+--
+
+--
 -- Dumping data for table `tbl_vendor`
 --
 
@@ -155,6 +185,99 @@ INSERT INTO `tbl_vendor` (`id`, `full_name`, `username`, `password`) VALUES
 (1, 'Rahim Mia', 'iamRahim', '9733b92d7d60ecac9ad32ff7a5c87a3c'),
 (2, 'Karim Mia', 'iamKarim', '2167a6ac80340b69f3b05b800417d6c7'),
 (3, 'Asadullah Bin Rahman', 'galib', '03847129f14d98cbcba02ab00b8aadf5');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_v_c`
+--
+-- Creation: Sep 18, 2021 at 01:25 PM
+--
+
+CREATE TABLE `tbl_v_c` (
+  `v_id` int(10) UNSIGNED NOT NULL,
+  `c_id` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONSHIPS FOR TABLE `tbl_v_c`:
+--   `c_id`
+--       `tbl_category` -> `id`
+--   `v_id`
+--       `tbl_vendor` -> `id`
+--   `v_id`
+--       `tbl_vendor` -> `id`
+--   `c_id`
+--       `tbl_category` -> `id`
+--
+
+--
+-- Dumping data for table `tbl_v_c`
+--
+
+INSERT INTO `tbl_v_c` (`v_id`, `c_id`) VALUES
+(3, 21),
+(3, 25),
+(3, 26);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_v_f`
+--
+-- Creation: Sep 18, 2021 at 01:28 PM
+--
+
+CREATE TABLE `tbl_v_f` (
+  `v_id` int(10) UNSIGNED DEFAULT NULL,
+  `f_id` int(10) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONSHIPS FOR TABLE `tbl_v_f`:
+--   `v_id`
+--       `tbl_vendor` -> `id`
+--   `f_id`
+--       `tbl_food` -> `id`
+--   `v_id`
+--       `tbl_vendor` -> `id`
+--   `f_id`
+--       `tbl_food` -> `id`
+--
+
+--
+-- Dumping data for table `tbl_v_f`
+--
+
+INSERT INTO `tbl_v_f` (`v_id`, `f_id`) VALUES
+(3, 9),
+(3, 6),
+(3, 15);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_v_o`
+--
+-- Creation: Sep 18, 2021 at 01:30 PM
+--
+
+CREATE TABLE `tbl_v_o` (
+  `v_id` int(10) UNSIGNED NOT NULL,
+  `o_id` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONSHIPS FOR TABLE `tbl_v_o`:
+--   `v_id`
+--       `tbl_vendor` -> `id`
+--   `o_id`
+--       `tbl_order` -> `id`
+--   `v_id`
+--       `tbl_vendor` -> `id`
+--   `o_id`
+--       `tbl_order` -> `id`
+--
 
 --
 -- Indexes for dumped tables
@@ -191,6 +314,27 @@ ALTER TABLE `tbl_vendor`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_v_c`
+--
+ALTER TABLE `tbl_v_c`
+  ADD KEY `id_ibfk_1` (`c_id`),
+  ADD KEY `id_ibfk_2` (`v_id`);
+
+--
+-- Indexes for table `tbl_v_f`
+--
+ALTER TABLE `tbl_v_f`
+  ADD KEY `id_ibfk_3` (`v_id`),
+  ADD KEY `id_ibfk_4` (`f_id`);
+
+--
+-- Indexes for table `tbl_v_o`
+--
+ALTER TABLE `tbl_v_o`
+  ADD KEY `id_ibfk_5` (`v_id`),
+  ADD KEY `id_ibfk_6` (`o_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -223,6 +367,37 @@ ALTER TABLE `tbl_order`
 --
 ALTER TABLE `tbl_vendor`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `tbl_v_c`
+--
+ALTER TABLE `tbl_v_c`
+  ADD CONSTRAINT `id_ibfk_1` FOREIGN KEY (`c_id`) REFERENCES `tbl_category` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `id_ibfk_2` FOREIGN KEY (`v_id`) REFERENCES `tbl_vendor` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `tbl_v_c_ibfk_1` FOREIGN KEY (`v_id`) REFERENCES `tbl_vendor` (`id`),
+  ADD CONSTRAINT `tbl_v_c_ibfk_2` FOREIGN KEY (`c_id`) REFERENCES `tbl_category` (`id`);
+
+--
+-- Constraints for table `tbl_v_f`
+--
+ALTER TABLE `tbl_v_f`
+  ADD CONSTRAINT `id_ibfk_3` FOREIGN KEY (`v_id`) REFERENCES `tbl_vendor` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `id_ibfk_4` FOREIGN KEY (`f_id`) REFERENCES `tbl_food` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `tbl_v_f_ibfk_1` FOREIGN KEY (`v_id`) REFERENCES `tbl_vendor` (`id`),
+  ADD CONSTRAINT `tbl_v_f_ibfk_2` FOREIGN KEY (`f_id`) REFERENCES `tbl_food` (`id`);
+
+--
+-- Constraints for table `tbl_v_o`
+--
+ALTER TABLE `tbl_v_o`
+  ADD CONSTRAINT `id_ibfk_5` FOREIGN KEY (`v_id`) REFERENCES `tbl_vendor` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `id_ibfk_6` FOREIGN KEY (`o_id`) REFERENCES `tbl_order` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `tbl_v_o_ibfk_1` FOREIGN KEY (`v_id`) REFERENCES `tbl_vendor` (`id`),
+  ADD CONSTRAINT `tbl_v_o_ibfk_2` FOREIGN KEY (`o_id`) REFERENCES `tbl_order` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
