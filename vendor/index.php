@@ -77,9 +77,9 @@
 			<?php 
 				//Creat SQL Query to Get Total Revenue Generated
 				//Aggregate Function in SQL
-				$sql4 = "SELECT SUM(total) AS Total FROM tbl_order 
-				INNER JOIN tbl_v_o ON tbl_order.id = tbl_v_o.o_id 
-				INNER JOIN tbl_vendor ON tbl_v_o.v_id = ".$id." WHERE status = 'Delivered' ";
+				$sql4 = "SELECT SUM(DISTINCT tbl_order.total) AS Total FROM tbl_order 
+				INNER JOIN tbl_v_f ON tbl_order.f_id = tbl_v_f.f_id 
+				INNER JOIN tbl_vendor ON tbl_v_f.v_id = ".$id." WHERE status = 'Delivered' ";
 
 				//Execute the Query
 				$res4 = mysqli_query($conn, $sql4);
