@@ -73,6 +73,7 @@
                     <div class="food-menu-desc">
                         <h3><?php echo $title; ?></h3>
                         <input type="hidden" name="food" value="<?php echo $title; ?>">
+                    
 
                         <p class="food-price">$<?php echo $price; ?></p>
                         <input type="hidden" name="price" value="<?php echo $price; ?>">
@@ -111,12 +112,16 @@
                     // Get all the details from the form
 
                     $food = $_POST['food'];
+                    $f_id = $food_id;
                     $price = $_POST['price'];
                     $qty = $_POST['qty'];
 
                     $total = $price * $qty; // total = price x qty 
 
-                    $order_date = date("Y-m-d h:i:sa"); //Order DAte
+                    //$order_date = date_create()->format('Y-m-d H:i:s');; //Order DAte
+                    //The avobe stmt could be used, I used it in Food-Order project.
+                    //However this time tried NOW() sql function. It also works fine.
+
 
                     $status = "Ordered";  // Ordered, On Delivery, Delivered, Cancelled
 
@@ -133,12 +138,13 @@
                         price = $price,
                         qty = $qty,
                         total = $total,
-                        order_date = '$order_date',
+                        order_date = NOW(),
                         status = '$status',
                         customer_name = '$customer_name',
                         customer_contact = '$customer_contact',
                         customer_email = '$customer_email',
-                        customer_address = '$customer_address'
+                        customer_address = '$customer_address',
+                        f_id = '$f_id';
                     ";
 
                     //echo $sql2; die();
@@ -150,13 +156,13 @@
                     if($res2==true)
                     {
                         //Query Executed and Order Saved
-                        $_SESSION['order'] = "<div class='success text-center'>Food Ordered Successfully.</div>";
+                        $_SESSION['order'] = "<div class='success text-center'>Item Ordered Successfully.</div>";
                         header('location:'.SITEURL);
                     }
                     else
                     {
                         //Failed to Save Order
-                        $_SESSION['order'] = "<div class='error text-center'>Failed to Order Food.</div>";
+                        $_SESSION['order'] = "<div class='error text-center'>Failed to Order.</div>";
                         header('location:'.SITEURL);
                     }
 
