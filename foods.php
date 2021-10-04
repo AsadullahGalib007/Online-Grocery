@@ -14,7 +14,13 @@
     </section>
     <!-- fOOD sEARCH Section Ends Here -->
 
-
+    <?php 
+        if(isset($_SESSION['order']))
+        {
+            echo $_SESSION['order'];
+            unset($_SESSION['order']);
+        }
+    ?>
 
     <!-- fOOD MEnu Section Starts Here -->
     <section class="food-menu">
@@ -74,7 +80,12 @@
                                 </p>
                                 <br>
 
-                                <a href="<?php echo SITEURL; ?>order.php?food_id=<?php echo $id; ?>" class="btn btn-primary">Order Now</a>
+                                <form action = "manage_cart.php" method = "POST">
+                                <input type="hidden" name="Item_Name" value="<?= $title; ?>">
+                                <input type="hidden" name="Price" value="<?= $price;?>">
+                                <input type="hidden" name="food_id" value="<?= $id;?>">
+                                <button type="submit" name="Add_To_Cart" class="btn btn-primary">Add To Cart</button>
+                            </form>
                             </div>
                         </div>
 

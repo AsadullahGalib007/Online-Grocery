@@ -38,6 +38,17 @@
                         <a href="<?php echo SITEURL; ?>log-in.php">Log in</a>
                     </li>
                     
+                    <?php 
+                     $count=0;
+                     if(isset($_SESSION['cart']))
+                     {
+                    $count=count($_SESSION['cart']);
+                     }
+                    ?>
+                    <li>
+                        <a href="mycart.php">My Cart ( <?php echo $count; ?> )</a>
+                    </li>
+                    
                     <li>
                         <a href="#">Contact</a>
                     </li>

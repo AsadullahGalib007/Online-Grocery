@@ -59,8 +59,8 @@
 			<?php 
 				//Sql Query 
 				$sql3 = "SELECT DISTINCT tbl_order.id FROM tbl_order 
-				INNER JOIN tbl_v_o ON tbl_order.id = tbl_v_o.o_id 
-				INNER JOIN tbl_vendor ON tbl_v_o.v_id = ".$id;
+				INNER JOIN tbl_v_f ON tbl_order.f_id = tbl_v_f.f_id 
+				INNER JOIN tbl_vendor ON tbl_v_f.v_id = ".$id;
 				//Execute Query
 				$res3 = mysqli_query($conn, $sql3);
 				//Count Rows
