@@ -1,4 +1,3 @@
-<link rel="stylesheet" type="text/css" href="../css/admin.css">
 <?php include('partials/menu.php'); ?>
 
 <div class="main-content">
