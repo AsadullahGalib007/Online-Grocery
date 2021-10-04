@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 04, 2021 at 11:42 AM
+-- Generation Time: Oct 04, 2021 at 07:00 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -155,7 +155,10 @@ INSERT INTO `tbl_order` (`id`, `food`, `price`, `qty`, `total`, `order_date`, `s
 (3, 'Mixed Pizza', '10.00', 2, '20.00', '2020-11-30 04:07:17', 'Delivered', 'Jana Bush', '+1 (562) 101-2028', 'tydujy@mailinator.com', 'Minima iure ducimus', 0),
 (4, 'Cake', '19.00', 1, '19.00', '2021-10-04 14:34:59', 'On Delivery', 'Galib', '01701080021', 'abrgalib@gmail.com', 'asdfsdfsadfsdafd', 9),
 (5, 'Dalgona Coffee', '5.00', 1, '5.00', '2021-10-04 14:41:40', 'On Delivery', 'Asadullah', '1234567891011', 'asadullahgalib007@gmail.com', 'dsfsdfsadfsdafwerasdf', 15),
-(6, 'Dalgona Coffee', '5.00', 3, '15.00', '2021-10-04 14:49:56', 'Delivered', 'Oishe', '01778799990', 'oishe5949@gmail.com', 'Bogura', 15);
+(6, 'Dalgona Coffee', '5.00', 3, '15.00', '2021-10-04 14:49:56', 'Delivered', 'Oishe', '01778799990', 'oishe5949@gmail.com', 'Bogura', 15),
+(7, 'Sadeko Momo', '6.00', 1, '6.00', '2021-10-04 18:47:19', 'Ordered', 'Asadullah Bin Rahman Galib', '1234567891901', 'abrgalib@gmail.com', 'abrgalib@gmail.com', 6),
+(8, 'Dalgona Coffee', '5.00', 1, '5.00', '2021-10-04 18:47:19', 'Ordered', 'Asadullah Bin Rahman Galib', '1234567891901', 'abrgalib@gmail.com', 'abrgalib@gmail.com', 15),
+(9, 'Cake', '19.00', 2, '38.00', '2021-10-04 18:47:19', 'Ordered', 'Asadullah Bin Rahman Galib', '1234567891901', 'abrgalib@gmail.com', 'abrgalib@gmail.com', 9);
 
 -- --------------------------------------------------------
 
@@ -351,7 +354,7 @@ ALTER TABLE `tbl_food`
 -- AUTO_INCREMENT for table `tbl_order`
 --
 ALTER TABLE `tbl_order`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tbl_vendor`
