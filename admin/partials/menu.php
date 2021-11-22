@@ -2,13 +2,14 @@
 
     include('../config/constants.php'); 
     include('login-check.php');
+    ob_start();
 
 ?>
 
 
 <html>
     <head>
-        <title>Online Grocery</title>
+        <title>Online Grocery - Admin Panel</title>
 
         <link rel="stylesheet" href="../css/admin.css">
     </head>

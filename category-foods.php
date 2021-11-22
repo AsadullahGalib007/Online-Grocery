@@ -89,13 +89,18 @@
 
                             <div class="food-menu-desc">
                                 <h4><?php echo $title; ?></h4>
-                                <p class="food-price">$<?php echo $price; ?></p>
+                                <p class="food-price"><?php echo $price; ?> BDT</p>
                                 <p class="food-detail">
                                     <?php echo $description; ?>
                                 </p>
                                 <br>
 
-                                <a href="<?php echo SITEURL; ?>order.php?food_id=<?php echo $id; ?>" class="btn btn-primary">Order Now</a>
+                                <form action = "manage_cart.php" method = "POST">
+                                <input type="hidden" name="Item_Name" value="<?= $title; ?>">
+                                <input type="hidden" name="Price" value="<?= $price;?>">
+                                <input type="hidden" name="food_id" value="<?= $id;?>">
+                                <button type="submit" name="Add_To_Cart" class="btn btn-primary">Add To Cart</button>
+                                </form>
                             </div>
                         </div>
 

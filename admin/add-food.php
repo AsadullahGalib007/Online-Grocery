@@ -217,6 +217,7 @@
                     featured = '$featured',
                     active = '$active'
                 ";
+                // echo "$sql2";die();
 
                 //Execute the Query
                 $res2 = mysqli_query($conn, $sql2);

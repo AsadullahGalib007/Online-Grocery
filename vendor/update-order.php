@@ -65,7 +65,7 @@
                 <tr>
                     <td>Price</td>
                     <td>
-                        <b> $ <?php echo $price; ?></b>
+                        <b>  <?php echo $price; ?> BDT</b>
                     </td>
                 </tr>
 

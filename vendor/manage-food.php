@@ -1,4 +1,4 @@
-<?php include('partials/menu.php'); ?>
+-<?php include('partials/menu.php'); ?>
 
 <div class="main-content">
     <div class="wrapper">
@@ -64,6 +64,7 @@
                         <th>S.N.</th>
                         <th>Title</th>
                         <th>Image</th>
+                        <th>Price</th>
                         <th>Featured</th>
                         <th>Active</th>
                         <th>Actions</th>
@@ -104,6 +105,7 @@
                                     <tr class="text-center">
                                         <td><?php echo $sn++; ?>. </td>
                                         <td><?php echo $title; ?></td>
+                                        <td><?php echo $price; ?> BDT</td>
                                         <td>
                                             <?php  
                                                 //Chcek whether image name is available or not
@@ -159,6 +161,7 @@
                             {
                                 $id = $row2['id'];
                                 $title = $row2['title'];
+                                $price = $row2['price'];
                                 $image_name = $row2['image_name'];
                                 $featured = $row2['featured'];
                                 $active = $row2['active'];
@@ -166,6 +169,7 @@
                                     <tr class="text-center">
                                         <td><?php echo $sn++; ?>. </td>
                                         <td><?php echo $title; ?></td>
+                                        <td><?php echo $price; ?> BDT</td>
                                         <td>
                                             <?php  
                                                 //Chcek whether image name is available or not

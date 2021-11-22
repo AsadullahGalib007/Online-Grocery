@@ -3,13 +3,13 @@
         <div class="container text-center">
             <ul>
                 <li>
-                    <a href="#"><img src="https://img.icons8.com/fluent/50/000000/facebook-new.png"/></a>
+                    <a href="#"><img src="../facebook-new.png"/></a>
                 </li>
                 <li>
-                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a>
+                    <a href="#"><img src="../images/instagram-new.png"/></a>
                 </li>
                 <li>
-                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
+                    <a href="#"><img src="../images/twitter.png"/></a>
                 </li>
             </ul>
         </div>
@@ -19,7 +19,7 @@
     <!-- footer Section Starts Here -->
     <section class="footer">
         <div class="container text-center">
-            <p>All rights reserved. Designed By <a href="#">Galib, Bushra</a></p>
+            <p>2021 All rights reserved, Online Grocery. Designed By <a href="#">Galib, Bushra</a></p>
         </div>
     </section>
     <!-- footer Section Ends Here -->

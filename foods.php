@@ -74,7 +74,7 @@
 
                             <div class="food-menu-desc">
                                 <h4><?php echo $title; ?></h4>
-                                <p class="food-price">$<?php echo $price; ?></p>
+                                <p class="food-price"><?php echo $price; ?> BDT</p>
                                 <p class="food-detail">
                                     <?php echo $description; ?>
                                 </p>
@@ -85,7 +85,7 @@
                                 <input type="hidden" name="Price" value="<?= $price;?>">
                                 <input type="hidden" name="food_id" value="<?= $id;?>">
                                 <button type="submit" name="Add_To_Cart" class="btn btn-primary">Add To Cart</button>
-                            </form>
+                                </form>
                             </div>
                         </div>
 
