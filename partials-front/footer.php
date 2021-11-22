@@ -3,13 +3,13 @@
         <div class="container text-center">
             <ul>
                 <li>
-                    <a href="#"><img src="../facebook-new.png"/></a>
+                    <a href="#"><img src="images/facebook-new.png"></a>
                 </li>
                 <li>
-                    <a href="#"><img src="../images/instagram-new.png"/></a>
+                    <a href="#"><img src="images/instagram-new.png"></a>
                 </li>
                 <li>
-                    <a href="#"><img src="../images/twitter.png"/></a>
+                    <a href="#"><img src="images/twitter.png"></a>
                 </li>
             </ul>
         </div>
