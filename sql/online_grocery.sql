@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 22, 2021 at 06:18 AM
+-- Generation Time: Nov 25, 2021 at 08:00 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -49,8 +49,7 @@ CREATE TABLE `tbl_admin` (
 INSERT INTO `tbl_admin` (`id`, `full_name`, `username`, `password`) VALUES
 (101, 'Asadullah Al Galib', 'galib', '03847129f14d98cbcba02ab00b8aadf5'),
 (102, 'Bushra Sheikh', 'bushra', 'fa0f6f6768c23171b84bcef5aeb1e0c3'),
-(108, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
-(110, 'admin2', 'admin2', 'c84258e9c39059a89ab77d846ddab909');
+(108, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3');
 
 -- --------------------------------------------------------
 
@@ -114,30 +113,30 @@ CREATE TABLE `tbl_food` (
 --
 
 INSERT INTO `tbl_food` (`id`, `title`, `description`, `price`, `image_name`, `category_id`, `featured`, `active`) VALUES
-(9, 'Cake', 'Burst of sweetness. Must Try the RED VELVET. (2 Pound)', '899.00', 'Food-Name-3224.jpg', 9, 'Yes', 'Yes'),
+(9, 'Red Velvet Cake', 'Burst of sweetness. Must Try the RED VELVET. (2 Pound)', '899.00', 'Food-Name-3224.jpg', 9, 'Yes', 'Yes'),
 (23, 'Mango', 'Taste the delicious seasonal mangoes. Top quality Langra / Himsagor mango will be delivered depending on current availability.', '300.00', 'Food-Name-1020.jpg', 39, 'Yes', 'Yes'),
 (24, 'Burger', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a nisl bibendum nulla tincidunt tincidunt. Mauris ullamcorper, orci et lobortis semper, enim ligula aliquet augue.', '250.00', 'Food-Name-6340.jpg', 40, 'Yes', 'Yes'),
 (25, 'Pizza L', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consequat ipsum ipsum, quis suscipit dui lobortis in. Sed scelerisque nulla a pulvinar gravida. Donec pulvinar. ', '550.00', 'Food-Name-7833.jpg', 40, 'Yes', 'Yes'),
 (26, 'Ajwa date', ' Azwa dates are black and medium in size. In terms of nutrition, dates also have all the necessary nutrients. According to nutritionists, dates contain protein, carbohydrates, calories, sodium, iron and many other nutrients. Dates have the ability to prevent disease. Its sunnah to take 6 dates at breakfast.(500gm)', '690.00', 'Food_Name_979.png', 39, 'Yes', 'Yes'),
 (27, 'Orange', 'Fresh orange. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consequat ipsum ipsum, quis suscipit dui lobortis in. Sed scelerisque nulla a pulvinar gravida. Donec pulvinar.(1 KG)', '240.00', 'Food-Name-1011.jpg', 39, 'No', 'Yes'),
-(28, 'Apple', 'An Apple a day, keep the doctor away.', '10.00', 'Food-Name-1012.jpg', 39, 'Yes', 'Yes'),
-(29, 'Grape', 'Ask no questions, hear no lies. Who says grapes are sour...!!!', '17.00', 'Food-Name-1013.jpg', 39, 'Yes', 'Yes'),
-(30, 'Lemon', 'Lemon reduces body fat.', '3.00', 'Food-Name-998.jpg', 39, 'Yes', 'Yes'),
-(31, 'Banana', 'BaaaaaaaaaaaaNnnnnnAaaaaaaaaaaNnnnnnnAaaaaaaaaa.....!!!!!', '1.00', 'Food-Name-999.jpg', 39, 'No', 'Yes'),
-(32, 'Carrot', 'Carrot', '3.00', 'Food-Name-1015.jpg', 41, 'No', 'Yes'),
-(33, 'cucumber', 'cucumber', '2.00', 'Food-Name-1016.jpg', 41, 'No', 'Yes'),
-(34, 'Spice', 'Spice', '23.00', 'Food-Name-1017.jpg', 41, 'Yes', 'Yes'),
-(35, 'Onion', 'Onion', '2.00', 'Food-Name-1018.jpg', 41, 'No', 'Yes'),
-(36, 'Garlic', 'Garlic', '2.00', 'Food-Name-1019.jpg', 9, 'No', 'Yes'),
-(37, 'Nescafe Classic', 'Nescafe Classic', '5.00', 'Food-Name-1010.jpg', 42, 'No', 'Yes'),
-(38, 'Nescafe Gold', 'Nescafe Gold', '50.00', 'Food-Name-1021.jpg', 42, 'Yes', 'Yes'),
-(39, 'Mustard oil', 'Mustard oil', '3.00', 'Food-Name-1025.jpg', 43, 'Yes', 'Yes'),
-(40, 'Soybean oil', 'Soybean oil', '3.00', 'Food-Name-1026.jpg', 43, 'No', 'Yes'),
-(41, 'Black seed oil', 'It is said that black seed oil can cure anything except death.', '5.00', 'Food-Name-1027.jpg', 43, 'Yes', 'Yes'),
-(42, 'Frozen Meat', 'Frozen Meat. 1 kg 500 bdt', '500.00', 'Food-Name-1023.jpg', 44, 'No', 'Yes'),
-(43, 'Frozen Fish', 'Frozen fish', '200.00', 'Food-Name-1024.jpg', 9, 'No', 'Yes'),
-(44, 'Momo', 'Try out the delicious Nepali momos', '100.00', 'Food-Name-3649.jpg', 40, 'Yes', 'Yes'),
-(45, 'Pasta', 'Pasta', '100.00', 'Food-Name-4999.jpg', 40, 'No', 'Yes');
+(28, 'Apple', 'An Apple a day, keeps the doctor away.(1 KG)', '190.00', 'Food-Name-1012.jpg', 39, 'Yes', 'Yes'),
+(29, 'Grape', 'Ask no questions, hear no lies. Who says grapes are sour...!!!\r\n(1 KG)', '270.00', 'Food-Name-1013.jpg', 39, 'Yes', 'Yes'),
+(30, 'Lemon', 'Lemon reduces body fat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum ut velit eu dignissim. Suspendisse at laoreet sapien. In et justo gravida, cursus erat in. (4 Pcs)', '20.00', 'Food-Name-998.jpg', 39, 'Yes', 'Yes'),
+(31, 'Banana', 'Bananas contain fiber, potassium, folate, and antioxidants, such as vitamin C. All of these support heart health. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum ut velit eu dignissim. Suspendisse at laoreet sapien. In et justo gravida, cursus erat in. (4 Pcs)', '24.00', 'Food-Name-999.jpg', 39, 'Yes', 'Yes'),
+(32, 'Carrot', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum ut velit eu dignissim. Suspendisse at laoreet sapien. In et justo gravida, cursus erat in.', '50.00', 'Food-Name-1015.jpg', 41, 'No', 'Yes'),
+(33, 'Cucumber', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum ut velit eu dignissim. Suspendisse at laoreet sapien. In et justo gravida, cursus erat in.(500 gm)', '25.00', 'Food-Name-1016.jpg', 41, 'No', 'Yes'),
+(34, 'Kashmiri Mirch', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum ut velit eu dignissim. Suspendisse at laoreet sapien. In et justo gravida, cursus erat in.(50 gm)', '110.00', 'Food-Name-1017.jpg', 41, 'Yes', 'Yes'),
+(35, 'Onion', 'Deshi Peyaj. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum ut velit eu dignissim. Suspendisse at laoreet sapien. In et justo gravida, cursus erat in.(1 KG)', '55.00', 'Food-Name-1018.jpg', 41, 'No', 'Yes'),
+(36, 'Garlic', 'Deshi Roshun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum ut velit eu dignissim. Suspendisse at laoreet sapien. In et justo gravida, cursus erat in. (500 gm)', '39.00', 'Food-Name-1019.jpg', 41, 'No', 'Yes'),
+(37, 'Nescafe Classic', 'Nescafe Classic. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum ut velit eu dignissim. Suspendisse at laoreet sapien. In et justo gravida, cursus erat in.(200 gm)', '450.00', 'Food-Name-1010.jpg', 42, 'Yes', 'Yes'),
+(38, 'Nescafe Gold', 'Nescafe Gold. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum ut velit eu dignissim. Suspendisse at laoreet sapien. In et justo gravida, cursus erat in.(200 gm)', '600.00', 'Food-Name-1021.jpg', 42, 'Yes', 'Yes'),
+(39, 'Mustard oil', 'Fresh Mustard Oil. \r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum ut velit eu dignissim. Suspendisse at laoreet sapien. In et justo gravida, cursus erat in. (1 ltr)', '270.00', 'Food-Name-1025.jpg', 43, 'Yes', 'Yes'),
+(40, 'Soybean oil', 'Rupchanda Soyabean Oil. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum ut velit eu dignissim. Suspendisse at laoreet sapien. In et justo gravida, cursus erat in. (5 ltr)', '750.00', 'Food-Name-1026.jpg', 43, 'No', 'Yes'),
+(41, 'Black seed oil', 'It is said that black seed oil can cure anything except death. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum ut velit eu dignissim. Suspendisse at laoreet sapien. In et justo gravida, cursus erat in.(100 ml)', '250.00', 'Food-Name-1027.jpg', 43, 'Yes', 'Yes'),
+(42, 'Frozen Meat', 'Premium quality locally sourced. Meat, such as beef, is mainly composed of protein. Usually eaten as roasts, ribs, or steaks, beef is also commonly ground or minced. Patties of ground beef are often used in hamburgers. Processed beef products include corned beef, beef jerky, and sausages. Fresh lean beef is rich in various vitamins and minerals, especially iron and zinc, and is therefore recommended as part of a healthy diet.(1 KG)', '640.00', 'Food-Name-1023.jpg', 44, 'No', 'Yes'),
+(43, 'Frozen Hilsha Fish', 'Ilish or Hilsha is a national fish of Bangladesh. Ilish body is strongly compressed and moderately deep with dorsal and ventral profile equally convex. It is considered to be one of most favorite and delicious fish in the world. t is an oily fish and rich in essential omega 3 fatty acids. n Bangladesh this fish is prepared in varity of way like it can be smoked, fried, steamed, baked, prepared with mustard seed paste, curd, brinjal (eggplant). Some common hilsa menus are Fried hilsa, Khichuri-Ilish, Sorshe Ilish, Panta Ilish,Vapa Ilish etc.\r\n\r\nIt has cultural value in Bangali’s life. It is an obvious food in many cultural festival like Pahela Boishakh, Saraswati Puja. (1 KG)', '1160.00', 'Food-Name-1024.jpg', 44, 'No', 'Yes'),
+(44, 'Momo', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum ut velit eu dignissim. Suspendisse at laoreet sapien. In et justo gravida, cursus erat in. (7 pcs)', '100.00', 'Food-Name-3649.jpg', 40, 'Yes', 'Yes'),
+(45, 'Pasta', 'Masala Pasta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum ut velit eu dignissim. Suspendisse at laoreet sapien. In et justo gravida, cursus erat in.', '150.00', 'Food-Name-4999.jpg', 40, 'No', 'Yes');
 
 -- --------------------------------------------------------
 
@@ -183,10 +182,12 @@ INSERT INTO `tbl_order` (`id`, `food`, `price`, `qty`, `total`, `order_date`, `s
 (10, 'Dumplings Specials', '5.00', 1, '5.00', '2021-11-19 11:11:08', 'Ordered', 'phoenix', '1234567890', 'phoenix@phoenix.com', 'phoenix', 3),
 (11, 'Sadeko Momo', '6.00', 1, '6.00', '2021-11-19 11:11:08', 'Ordered', 'phoenix', '1234567890', 'phoenix@phoenix.com', 'phoenix', 6),
 (12, 'Cake', '19.00', 1, '19.00', '2021-11-19 11:11:08', 'On Delivery', 'phoenix', '1234567890', 'phoenix@phoenix.com', 'phoenix', 9),
-(13, 'Spice', '23.00', 1, '23.00', '2021-11-21 06:13:04', 'Ordered', 'qqqq', '0145886688', 'abc@abc.com', 'abc@abc.com', 34),
+(13, 'Spice', '23.00', 1, '23.00', '2021-11-21 06:13:04', 'Delivered', 'qqqq', '0145886688', 'abc@abc.com', 'abc@abc.com', 34),
 (14, 'Banana', '4.00', 1, '4.00', '2021-11-21 06:13:04', 'Ordered', 'qqqq', '0145886688', 'abc@abc.com', 'abc@abc.com', 31),
 (15, 'Dalgona Coffee', '5.00', 1, '5.00', '2021-11-21 06:13:04', 'On Delivery', 'qqqq', '0145886688', 'abc@abc.com', 'abc@abc.com', 15),
-(16, 'Carrot', '3.00', 1, '3.00', '2021-11-21 16:33:48', 'Ordered', 'admin', '12344556', 'abc@abc.com', 'abc@abc.com', 32);
+(16, 'Carrot', '3.00', 1, '3.00', '2021-11-21 16:33:48', 'Delivered', 'admin', '12344556', 'abc@abc.com', 'abc@abc.com', 32),
+(17, 'Apple', '190.00', 1, '190.00', '2021-11-23 05:53:12', 'Ordered', 'earth', '0111111111111111', 'earth@earth.com', 'earth@earth.com', 28),
+(18, 'Ajwa date', '690.00', 1, '690.00', '2021-11-23 05:53:12', 'Delivered', 'earth', '0111111111111111', 'earth@earth.com', 'earth@earth.com', 26);
 
 -- --------------------------------------------------------
 
@@ -418,7 +419,7 @@ ALTER TABLE `tbl_food`
 -- AUTO_INCREMENT for table `tbl_order`
 --
 ALTER TABLE `tbl_order`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `tbl_vendor`
