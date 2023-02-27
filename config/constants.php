@@ -3,7 +3,7 @@
 	session_start();
 
 	//Constants
-	define('SITEURL', 'http://localhost/online_grocery/');
+	define('SITEURL', 'http://localhost/Online-Grocery/');
 	define('LOCALHOST', 'localhost');
 	define('DB_USERNAME', 'root');
 	define('DB_PASSWORD', '');
